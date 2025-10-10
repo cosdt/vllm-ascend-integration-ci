@@ -28,7 +28,7 @@ spec:
               - name: VLLM_VERSION
                 value: "v0.11.0"
               - name: VLLM_ASCEND_VERSION
-                value: "main"
+                value: "multi_node_test"
               - name: MOONCAKE_VERSION
                 value: "06cc217504a6f1b0cdaa26b096b985651b262748"
             command:
@@ -36,6 +36,7 @@ spec:
               - -c
               - |
                 bash /root/.cache/tests/run.sh
+                tail -f /dev/null
             resources:
               limits:
                 huawei.com/ascend-1980: "16"
@@ -87,7 +88,7 @@ spec:
               - name: VLLM_VERSION
                 value: "v0.11.0"
               - name: VLLM_ASCEND_VERSION
-                value: "main"
+                value: "multi_node_test"
               - name: MOONCAKE_VERSION
                 value: "06cc217504a6f1b0cdaa26b096b985651b262748"
             command:
@@ -95,6 +96,7 @@ spec:
               - -c
               - |
                 bash /root/.cache/tests/run.sh
+                tail -f /dev/null
             resources:
               limits:
                 huawei.com/ascend-1980: "16"
